@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+@import "./scss/reset", "./scss/variables", "./scss/mixins", "./scss/animations";
+
+body {
+  min-width: 32rem;
+  min-height: 100vh;
+
+  font-family: "Poppins", sans-serif;
+  background: #39289f;
+  @include font-config($size: 1.6rem, $color: $white, $weight: 400, $lh: 1.875);
+
+  @include mq("tablet") {
+    font-size: 1.4rem;
+  }
+}
+
+.page {
+  height: 100%;
+}
+
+.link {
+  color: $white;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
+
+  &:hover {
+    color: $orange;
+  }
+
+  &:active {
+    color: $orange-dk;
+  }
+}
+
+.title {
+  @include font-config($size: 3rem, $color: $white, $weight: 600, $lh: 1.875);
+
+  &--bigger {
+    @include font-config($size: 5rem, $weight: 700, $lh: 1.552);
+
+    @include mq("tablet") {
+      font-size: 3.5rem;
+    }
+  }
+}

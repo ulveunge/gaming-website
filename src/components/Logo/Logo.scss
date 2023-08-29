@@ -1,0 +1,5 @@
+@import "../../scss/mixins", "../../scss/variables", "../../scss/animations";
+
+.logo {
+  @include font-config($size: 2.9rem, $color: $white, $weight: 800, $lh: 1.535);
+}

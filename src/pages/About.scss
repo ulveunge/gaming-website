@@ -1,0 +1,10 @@
+@import "../scss/mixins", "../scss/variables", "../scss/animations";
+
+.body__about {
+  background: linear-gradient(
+    177deg,
+    #3b2a9f 43.02%,
+    rgba(47, 69, 182, 0.44) 84.17%,
+    rgba(114, 138, 185, 0.23) 100%
+  );
+}

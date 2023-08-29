@@ -1,0 +1,33 @@
+@import "../../scss/mixins", "../../scss/variables", "../../scss/animations";
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $orange;
+  color: $white;
+  box-shadow: 0px 25px 70px rgba($orange, 0.5);
+
+  transition: background-color 0.2s ease-out, transform 0.2s ease-out,
+    box-shadow 0.2s ease-out;
+
+  &--rounded-corners {
+    border-radius: 0.6rem;
+  }
+
+  &--rounded {
+    border-radius: 4.8rem;
+    background: linear-gradient(113deg, #fa8305 0%, #fb9e3c 100%);
+  }
+
+  &:active,
+  &:hover {
+    background-color: $orange-dk;
+    box-shadow: 0px 25px 70px rgba($orange, 0.8);
+  }
+
+  &:active {
+    transform: translateY(0.2rem);
+  }
+}

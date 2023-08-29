@@ -1,0 +1,13 @@
+@import "./mixins";
+
+@include keyframes(nav-link) {
+  from {
+    transform: translateX(0.6rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
