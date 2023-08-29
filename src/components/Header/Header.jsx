@@ -5,6 +5,7 @@ import { CgClose, CgMenuRight } from "react-icons/cg";
 import React, { useCallback, useState } from "react";
 
 import Button from "../Button/Button";
+import Container from "../Container/Container";
 import Icon from "../Icon/Icon";
 import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
@@ -81,33 +82,35 @@ const Header = ({ children }) => {
 
   return (
     <header className="header">
-      <nav className="header__nav nav">
-        <Logo />
-        {linksList}
-        <nav className="nav--mobile">
-          <button
-            className="nav__button"
-            onClick={menuOpen ? closeMenuHandler : openMenuHandler}
-          >
-            {menuOpen ? <CgClose size="24" /> : <CgMenuRight size="24" />}
-          </button>
-          {contactUsButton}
-          <AnimatePresence>
-            {menuOpen && (
-              <motion.div
-                ref={ref}
-                className="nav__mobile-container"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0 }}
-              >
-                {linksList}
-              </motion.div>
-            )}
-          </AnimatePresence>
+      <Container size={{ left: "5.5rem", right: "6.3rem" }}>
+        <nav className="header__nav nav">
+          <Logo />
+          {linksList}
+          <div className="nav--mobile">
+            <button
+              className="nav__button"
+              onClick={menuOpen ? closeMenuHandler : openMenuHandler}
+            >
+              {menuOpen ? <CgClose size="24" /> : <CgMenuRight size="24" />}
+            </button>
+            {contactUsButton}
+            <AnimatePresence>
+              {menuOpen && (
+                <motion.div
+                  ref={ref}
+                  className="nav__mobile-container"
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0 }}
+                >
+                  {linksList}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </nav>
-      </nav>
-      <div className="header__content">{children}</div>
+        <div className="header__content">{children}</div>
+      </Container>
     </header>
   );
 };

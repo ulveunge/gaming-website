@@ -17,7 +17,7 @@
 
     @include custom-mq(1200px) {
       background-size: 40rem;
-      background-position: top right -3rem;
+      background-position: top right -3.4rem;
     }
 
     @include mq("tablet-wide") {
@@ -39,12 +39,10 @@
 
     margin-top: 12.1rem;
     margin-left: 9.2rem;
-    margin-right: 14.7rem;
 
     @include mq("tablet-wide") {
       margin-top: 7rem;
       margin-left: 0;
-      margin-right: 0;
     }
 
     width: 48rem;

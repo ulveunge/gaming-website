@@ -1,19 +1,7 @@
 @import "../../scss/mixins", "../../scss/variables", "../../scss/animations";
 
 .header {
-  display: flex;
-  flex-direction: column;
-
   padding-top: 3.7rem;
-  padding-left: 5.5rem;
-  padding-right: 6.3rem;
-
-  @include container-padding;
-
-  @include mq("tablet") {
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
-  }
 }
 
 .nav {

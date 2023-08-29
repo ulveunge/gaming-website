@@ -1,0 +1,28 @@
+@import "../../scss/mixins";
+
+.container {
+  width: 100%;
+  @include container-padding;
+}
+
+@include mq("tablet-wide", min) {
+  .container--same-values {
+    padding-left: var(--container-padding-size);
+    padding-right: var(--container-padding-size);
+  }
+
+  .container--same-margin-values {
+    margin-left: var(--container-margin-size);
+    margin-right: var(--container-margin-size);
+  }
+
+  .container--different-values {
+    padding-left: var(--container-padding-left);
+    padding-right: var(--container-padding-right);
+  }
+
+  .container--different-margin-values {
+    margin-left: var(--container-margin-left);
+    margin-right: var(--container-margin-right);
+  }
+}
