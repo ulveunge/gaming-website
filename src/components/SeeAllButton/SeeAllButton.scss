@@ -11,7 +11,7 @@
 
   background-color: rgba($white, 0.11);
 
-  transition: background-color 0.2s ease-out;
+  transition: transform 0.2s ease-out, background-color 0.2s ease-out;
 
   @include font-config($size: 2rem, $color: $white, $weight: 500);
 
@@ -23,5 +23,9 @@
 
   &:hover {
     background-color: rgba($white, 0.19);
+  }
+
+  &:active {
+    transform: translateY(0.2rem);
   }
 }
