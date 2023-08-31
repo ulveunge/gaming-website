@@ -82,3 +82,29 @@
     height: 5.3rem;
   }
 }
+
+.home {
+  &__trending-games {
+    margin-top: 17.8rem;
+
+    @include mq("tablet") {
+      margin-top: 8rem;
+    }
+  }
+}
+
+.trending-games-section {
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 5.8rem;
+
+    @include mq("tablet") {
+      flex-direction: column;
+      row-gap: 1rem;
+      align-items: initial;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../scss/mixins", "../../scss/variables", "../../scss/animations";
+
+.see-all-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 13.9rem;
+  height: 5.7rem;
+  border-radius: 1rem;
+
+  background-color: rgba($white, 0.11);
+
+  transition: background-color 0.2s ease-out;
+
+  @include font-config($size: 2rem, $color: $white, $weight: 500);
+
+  @include mq("tablet") {
+    width: calc(13.9rem - 10%);
+    height: calc(5.7rem - 10%);
+    font-size: calc(2rem - 20%);
+  }
+
+  &:hover {
+    background-color: rgba($white, 0.19);
+  }
+}

@@ -1,8 +1,12 @@
 import "./Home.scss";
 
 import Button from "../components/Button/Button";
+import Container from "../components/Container/Container";
 import Header from "../components/Header/Header";
 import React from "react";
+import SeeAllButton from "../components/SeeAllButton/SeeAllButton";
+import TrendingGames from "../components/TrendingGames/TrendingGames";
+import trendingGamesData from "../data/trendingGamesData";
 import useBodyClass from "../hooks/useBodyClass";
 
 const Home = () => {
@@ -33,6 +37,19 @@ const Home = () => {
           Get in touch
         </Button>
       </Header>
+      <main className="home">
+        <Container size="14.7rem">
+          <section className="home__trending-games trending-games-section">
+            <div className="trending-games-section__info">
+              <h3 className="trending-games-section__title title title--big">
+                Currently Trending Games
+              </h3>
+              <SeeAllButton className="trending-games-section__see-all-btn" />
+            </div>
+            <TrendingGames data={trendingGamesData} />
+          </section>
+        </Container>
+      </main>
     </>
   );
 };

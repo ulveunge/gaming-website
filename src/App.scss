@@ -34,11 +34,23 @@ body {
 .title {
   @include font-config($size: 3rem, $color: $white, $weight: 600, $lh: 1.875);
 
+  @include mq("tablet") {
+    font-size: 2.2rem;
+  }
+
+  &--big {
+    @include font-config($size: 3.1rem);
+
+    @include mq("tablet") {
+      font-size: 2.3rem;
+    }
+  }
+
   &--bigger {
     @include font-config($size: 5rem, $weight: 700, $lh: 1.552);
 
     @include mq("tablet") {
-      font-size: 3.5rem;
+      font-size: 3.7rem;
     }
   }
 }

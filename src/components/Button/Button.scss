@@ -7,7 +7,7 @@
 
   background-color: $orange;
   color: $white;
-  box-shadow: 0px 25px 70px rgba($orange, 0.5);
+  box-shadow: 0px 2.5rem 7rem rgba($orange, 0.5);
 
   transition: background-color 0.2s ease-out, transform 0.2s ease-out,
     box-shadow 0.2s ease-out;
@@ -24,7 +24,7 @@
   &:active,
   &:hover {
     background-color: $orange-dk;
-    box-shadow: 0px 25px 70px rgba($orange, 0.8);
+    box-shadow: 0px 2.5rem 7rem rgba($orange, 0.8);
   }
 
   &:active {
