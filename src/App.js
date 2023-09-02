@@ -1,4 +1,5 @@
 import "./App.scss";
+import "swiper/scss";
 
 import { About, Contact, Home, News, Services } from "./pages/pages";
 import { Route, Routes } from "react-router-dom";

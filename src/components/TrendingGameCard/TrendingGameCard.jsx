@@ -7,7 +7,7 @@ import classNames from "classnames";
 
 const TrendingGameCard = ({ data, className }) => {
   return (
-    <li className={classNames(className, "trending-game-card")}>
+    <div className={classNames(className, "trending-game-card")}>
       <Link to={data.link}>
         <div className="trending-game-card__image">
           <img src={data.img} alt={data.name} />
@@ -19,7 +19,7 @@ const TrendingGameCard = ({ data, className }) => {
           {data.followers} Followers
         </span>
       </div>
-    </li>
+    </div>
   );
 };
 

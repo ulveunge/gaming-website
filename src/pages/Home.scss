@@ -107,4 +107,19 @@
       align-items: initial;
     }
   }
+
+  &__slider {
+    margin: 0 -14.7rem !important;
+    padding: 0 14.7rem !important;
+
+    @include mq("tablet-wide") {
+      margin: 0 -3.2rem !important;
+      padding: 0 3.2rem !important;
+    }
+
+    @include mq("tablet") {
+      margin: 0 -2.4rem !important;
+      padding: 0 2.4rem !important;
+    }
+  }
 }

@@ -5,7 +5,7 @@ import Container from "../components/Container/Container";
 import Header from "../components/Header/Header";
 import React from "react";
 import SeeAllButton from "../components/SeeAllButton/SeeAllButton";
-import TrendingGames from "../components/TrendingGames/TrendingGames";
+import TrendingGamesSlider from "../components/TrendingGamesSlider/TrendingGamesSlider";
 import trendingGamesData from "../data/trendingGamesData";
 import useBodyClass from "../hooks/useBodyClass";
 
@@ -46,7 +46,10 @@ const Home = () => {
               </h3>
               <SeeAllButton className="trending-games-section__see-all-btn" />
             </div>
-            <TrendingGames data={trendingGamesData} />
+            <TrendingGamesSlider
+              className="trending-games-section__slider"
+              data={trendingGamesData}
+            />
           </section>
         </Container>
       </main>
