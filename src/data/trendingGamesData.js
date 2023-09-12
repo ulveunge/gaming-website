@@ -5,7 +5,7 @@ import leagueOfLegendsImg from "../assets/Home/TrendingGames/league_of_legends.j
 import strayImg from "../assets/Home/TrendingGames/stray.jpg";
 import uniqid from "uniqid";
 
-const TrendingGames = [
+const trendingGames = [
   {
     id: uniqid(),
     gameName: "For Honor",
@@ -43,4 +43,4 @@ const TrendingGames = [
   },
 ];
 
-export default TrendingGames;
+export default trendingGames;

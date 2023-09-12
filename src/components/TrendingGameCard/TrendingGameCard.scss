@@ -23,9 +23,6 @@
 
     border-radius: 2rem;
 
-    position: relative;
-    overflow: hidden;
-
     img {
       width: 100%;
       height: 100%;
@@ -34,31 +31,6 @@
 
       object-fit: cover;
       transition: transform 0.3s ease-out;
-    }
-
-    &::after {
-      @include pseudo;
-      top: 0;
-      left: 0;
-
-      width: 100%;
-      height: 100%;
-
-      background-color: rgba(0, 0, 0, 0.3);
-
-      opacity: 0;
-
-      transition: opacity 0.3s ease-out;
-    }
-
-    &:hover {
-      img {
-        transform: scale(1.1);
-      }
-
-      &::after {
-        opacity: 1;
-      }
     }
   }
 

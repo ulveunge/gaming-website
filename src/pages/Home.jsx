@@ -3,9 +3,11 @@ import "./Home.scss";
 import Button from "../components/Button/Button";
 import Container from "../components/Container/Container";
 import Header from "../components/Header/Header";
+import { Link } from "react-router-dom";
 import React from "react";
 import SeeAllButton from "../components/SeeAllButton/SeeAllButton";
 import TrendingGamesSlider from "../components/TrendingGamesSlider/TrendingGamesSlider";
+import gameReviewData from "../data/gameReview";
 import trendingGamesData from "../data/trendingGamesData";
 import useBodyClass from "../hooks/useBodyClass";
 
@@ -15,7 +17,7 @@ const Home = () => {
   return (
     <>
       <Header>
-        <span className="header__proved-by">Proved By prodesigner</span>
+        <span className="header__proved-by">Hello there!</span>
         <h2 className="title title--bigger header__title">
           Explore The Best Gaming Experience Online
         </h2>
@@ -50,6 +52,33 @@ const Home = () => {
               className="trending-games-section__slider"
               data={trendingGamesData}
             />
+          </section>
+          <section className="home__game-review game-review">
+            <h3 className="game-review__title title title--big">
+              {gameReviewData.title}
+            </h3>
+            <div className="game-review__content">
+              <h4 className="game-review__short-description title">
+                {gameReviewData.shortDescription}
+              </h4>
+              <div className="game-review__long-description">
+                <p className="game-review__text">
+                  {gameReviewData.longDescription}
+                </p>
+                <br />
+                <Link
+                  to={gameReviewData.link}
+                  className="game-review__link link link--underline"
+                >
+                  Learn more
+                </Link>
+              </div>
+              <div className="game-review__image-wrapper">
+                <div className="game-review__image card-effect">
+                  <img src={gameReviewData.img} alt={gameReviewData.imgAlt} />
+                </div>
+              </div>
+            </div>
           </section>
         </Container>
       </main>

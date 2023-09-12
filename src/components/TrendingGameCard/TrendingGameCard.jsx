@@ -16,7 +16,7 @@ const TrendingGameCard = ({ data, className }) => {
       })}
     >
       <Link to={data.link}>
-        <div className="trending-game-card__image">
+        <div className="trending-game-card__image card-effect">
           <img src={data.img} alt={data.gameName} />
         </div>
       </Link>
